@@ -2,6 +2,32 @@
 
 Single-page marketing website for a marine digital agency. Built with Next.js 14 (App Router), React 18, Tailwind CSS v4, and Framer Motion.
 
+## Domain Knowledge
+
+**IMPORTANT:** Before working on content, copy, SEO, AEO, GEO, schema markup, or marketing strategy, agents and skills MUST review the domain knowledge documents:
+
+- **[domain-knowledge/MarineForge_Domain_Knowledge.md](../domain-knowledge/MarineForge_Domain_Knowledge.md)** — Complete business context including:
+  - Company identity, mission, vision, and values
+  - Brand positioning and key differentiators
+  - Target markets and client segments (boat manufacturers, marine tech, dealers, charters, e-commerce)
+  - All 9 service offerings with deliverables and outcomes
+  - AI technology stack and implementation methodology
+  - Pricing structure and service tiers
+  - Messaging frameworks, value propositions, and objection handling
+  - Competitive landscape
+
+- **[domain-knowledge/MarineForge_SEO_GEO_AEO_Knowledge.md](../domain-knowledge/MarineForge_SEO_GEO_AEO_Knowledge.md)** — Technical SEO and optimization strategy:
+  - SEO (Search Engine Optimization) — traditional search rankings
+  - AEO (Answer Engine Optimization) — featured snippets, voice search, People Also Ask
+  - GEO (Generative Engine Optimization) — AI citations in ChatGPT, Perplexity, Google AI Overviews
+  - Marine industry-specific keyword strategy
+  - Schema markup requirements (FAQPage, HowTo, Organization, LocalBusiness, Service)
+  - Content structure for AI citation and featured snippets
+  - E-E-A-T signals and entity building
+  - Measurement KPIs for all three disciplines
+
+These documents are the source of truth for all content creation, copywriting, service descriptions, SEO implementation, and marketing strategy decisions.
+
 ## Project Layout
 
 ```
