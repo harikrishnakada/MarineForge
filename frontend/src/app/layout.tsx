@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -45,6 +46,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+     {process.env.NEXT_PUBLIC_GTM_ID && (
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+        )}
       <body className={inter.className}>{children}</body>
     </html>
   );

@@ -12,6 +12,7 @@ export function Hero() {
   const scale = useTransform(scrollY, [0, 400], [1, 1.1]);
 
   const heroImage = "https://images.unsplash.com/photo-1651821949453-f11a1ddfaf1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB5YWNodCUyMGFlcmlhbCUyMGNpbmVtYXRpYyUyMGJsdWUlMjB3YXRlcnxlbnwxfHx8fDE3NzA1ODAzNjl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
+  const heroImage2 = "/images/nicol-JrMzz7jUD5s-unsplash.jpg";
   useEffect(() => {
     // Simulate video load
     const timer = setTimeout(() => setVideoLoaded(true), 0);
@@ -27,17 +28,17 @@ export function Hero() {
       >
         {/* Hero background image */}
         <Image
-          src={heroImage}
+          src={heroImage2}
           alt="Luxury yacht aerial cinematic blue water"
           fill
-          className="object-cover"
+          className="object-cover flip-horizontal"
           priority
           sizes="100vw"
         />
         
         {/* Elegant overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent" />
       </motion.div>
 
       {/* Content */}
@@ -54,7 +55,7 @@ export function Hero() {
               transition={{ duration: 1, delay: 0.3 }}
               className="mb-8"
             >
-              <span className="text-white/80 text-sm tracking-[0.3em] uppercase">
+              <span className="text-white/80 text-sm tracking-[0.3em] uppercase drop-shadow(0 2px 8px rgba(0,0,0,0.5))">
                 Premium Marine Digital
               </span>
             </motion.div>
@@ -64,7 +65,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: videoLoaded ? 1 : 0, y: videoLoaded ? 0 : 30 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="text-6xl md:text-7xl lg:text-8xl text-white mb-8 leading-[0.95] tracking-tight"
+              className="text-6xl md:text-7xl lg:text-8xl text-white mb-8 leading-[0.95] tracking-tight drop-shadow(0 4px 12px rgba(0,0,0,0.6)) select-none"
             >
               Where craft meets
               <br />
@@ -76,7 +77,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: videoLoaded ? 1 : 0, y: videoLoaded ? 0 : 30 }}
               transition={{ duration: 1, delay: 0.9 }}
-              className="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl leading-relaxed font-light"
+              className="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl leading-relaxed font-light drop-shadow(0 2px 8px rgba(0,0,0,0.5))"
             >
               We create immersive digital experiences for the world's finest
               boat and yacht manufacturers.
