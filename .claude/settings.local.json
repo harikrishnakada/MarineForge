@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(dir /s \"c:\\\\Users\\\\harik\\\\source\\\\repos\\\\MarineMarketing\\\\code\\\\MarineForge\\\\frontend\"\")",
+      "Bash(npm ls:*)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

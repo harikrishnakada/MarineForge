@@ -1,7 +1,10 @@
+'use client';
+
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { Award, Target, Zap, Globe2, Anchor, Compass } from 'lucide-react';
+import Image from 'next/image';
 
 export function About() {
   const ref = useRef(null);
@@ -217,12 +220,15 @@ export function About() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Large featured image */}
             <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden group">
-              <motion.img
-                src="https://images.unsplash.com/photo-1768424744138-013d7af34289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMGxpZmVzdHlsZSUyMHByZW1pdW0lMjBhZHZlbnR1cmV8ZW58MXx8fHwxNzcwNTgwMzcwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Premium yacht adventure"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                whileHover={{ scale: 1.05 }}
-              />
+              <motion.div whileHover={{ scale: 1.05 }} className="w-full h-full relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1768424744138-013d7af34289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMGxpZmVzdHlsZSUyMHByZW1pdW0lMjBhZHZlbnR1cmV8ZW58MXx8fHwxNzcwNTgwMzcwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Premium yacht adventure"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, 66vw"
+                />
+              </motion.div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               
               <motion.div
@@ -243,12 +249,15 @@ export function About() {
             {/* Side content */}
             <div className="space-y-8">
               <div className="relative aspect-square rounded-3xl overflow-hidden group">
-                <motion.img
-                  src="https://images.unsplash.com/photo-1751250320427-2a26d131436a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMGNvY2twaXQlMjBjb250cm9scyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzcwNTgwODg0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Marine technology"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  whileHover={{ scale: 1.05 }}
-                />
+                <motion.div whileHover={{ scale: 1.05 }} className="w-full h-full relative">
+                  <Image
+                    src="https://images.unsplash.com/photo-1751250320427-2a26d131436a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMGNvY2twaXQlMjBjb250cm9scyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzcwNTgwODg0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="Marine technology"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </motion.div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1877F2]/80 to-transparent" />
                 
                 <motion.div

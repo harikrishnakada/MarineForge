@@ -1,7 +1,10 @@
+'use client';
+
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ExternalLink, TrendingUp, Users, Award } from 'lucide-react';
+import Image from 'next/image';
 
 export function Portfolio() {
   const ref = useRef(null);
@@ -114,10 +117,12 @@ export function Portfolio() {
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.6 }}
                     >
-                      <img
+                      <Image
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                       

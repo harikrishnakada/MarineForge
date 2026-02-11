@@ -1,6 +1,9 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 export function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -8,9 +11,10 @@ export function Hero() {
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
   const scale = useTransform(scrollY, [0, 400], [1, 1.1]);
 
+  const heroImage = "https://images.unsplash.com/photo-1651821949453-f11a1ddfaf1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB5YWNodCUyMGFlcmlhbCUyMGNpbmVtYXRpYyUyMGJsdWUlMjB3YXRlcnxlbnwxfHx8fDE3NzA1ODAzNjl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
   useEffect(() => {
     // Simulate video load
-    const timer = setTimeout(() => setVideoLoaded(true), 500);
+    const timer = setTimeout(() => setVideoLoaded(true), 0);
     return () => clearTimeout(timer);
   }, []);
 
@@ -21,12 +25,14 @@ export function Hero() {
         className="absolute inset-0"
         style={{ scale }}
       >
-        {/* Placeholder for video - using high-quality image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1651821949453-f11a1ddfaf1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB5YWNodCUyMGFlcmlhbCUyMGNpbmVtYXRpYyUyMGJsdWUlMjB3YXRlcnxlbnwxfHx8fDE3NzA1ODAzNjl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')`,
-          }}
+        {/* Hero background image */}
+        <Image
+          src={heroImage}
+          alt="Luxury yacht aerial cinematic blue water"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
         />
         
         {/* Elegant overlay */}

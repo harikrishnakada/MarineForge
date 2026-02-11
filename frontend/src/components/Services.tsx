@@ -1,7 +1,10 @@
+'use client';
+
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { Compass, Zap, Camera, TrendingUp, Code, Palette } from 'lucide-react';
+import Image from 'next/image';
 
 export function Services() {
   const ref = useRef(null);
@@ -119,10 +122,12 @@ export function Services() {
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
                 </motion.div>
